@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        .dashboard-item {
+            background: #f5f5f5;
+            border-radius: 8px;
+            overflow: hidden;
+            min-height: 300px;
+        }
+        .dashboard-item iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-grid">
+        <div class="dashboard-item">
+            <iframe src="https://www.listingtrack.io/spacs/list?tab=announced_spac_mergers"></iframe>
+        </div>
+        <div class="dashboard-item">
+            <iframe src="https://www.nasdaq.com/market-activity/ipos"></iframe>
+        </div>
+        <div class="dashboard-item">
+            <iframe src="https://dealroadshow.finsight.com/retail-roadshows"></iframe>
+        </div>
+        <div class="dashboard-item">
+            <iframe src="https://www.retailroadshow.com/"></iframe>
+        </div>
+    </div>
+</body>
+</html>
